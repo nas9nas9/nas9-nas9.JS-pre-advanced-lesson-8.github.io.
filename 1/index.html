@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 1300px;
+            margin: 0 auto;
+        }
+        .box {
+            width: 700px;
+            background-color: rgb(194, 221, 212);
+            padding: 10px;
+            margin: 200px auto;
+        }
+        .words {
+            font-size: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        span{
+            font-size: 27px;
+            color: red;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .flex {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .word {
+            width: 500px;
+            height: 30px;
+            margin: 20px;
+            outline: none;
+            border: 2px solid grey;
+            font-size: 20px;
+            padding:10px;
+        }
+        .word:focus {
+            border: 2px solid aqua;
+        }
+        .btn_add, .btn_reset {
+            width: 60px;
+            height: 35px;
+            margin: 20px;
+            border: none;
+            font-size: 15px;
+            border-radius: 5px;
+            
+        }
+        .btn_add {
+            background-color: yellow;
+            color:black;
+        }
+        .btn_reset {
+            background-color: red;
+            color:white;
+        }
+        .btn_add:hover, .btn_reset:hover {
+            border: 2px solid grey;
+        }
+        .text {
+            width: 655px;
+            height: 150px;
+            margin: 20px;
+            outline: none;
+            border: 2px solid grey;
+            font-size: 20px;
+            padding: 10px;
+            
+        }
+        .text:focus {
+            border: 2px solid aqua;
+        }
+        .btn_cenzor {
+            width: 657px;
+            height: 40px;
+            margin: 20px;
+            background-color: green;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            
+        }
+        .btn_cenzor:hover {
+            border: 2px solid grey;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="words">Bad words:<span class="bad"></span></div>
+            <form action="">
+                <div class="flex">
+                    <input type="text" class="word" placeholder="word here...">
+                    <input type="button" value="Add" class="btn_add" onclick="addWord()">
+                    <input type="button" value="Reset" class="btn_reset" onclick="resetWord()"><br>
+                </div>
+               
+                <input type="text" placeholder="text here..." class="text"><br>
+                <input type="button" value="Cenzor" class="btn_cenzor" onclick="editText()">
+            </form>
+            
+            
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
